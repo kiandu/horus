@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h2 class="text-center">Hello {{user.username}}</h2>
+
+ <!-- LOGGED IN USER -->
+{% if user.is_authenticated %}
+ <!-- CRIME REPORT -->
+ <!-- CRIME REPORT -->
+<div class="container" >
+  <div class="row">
+
+<!-- POLICE CLEARANCE -->
+<!-- POLICE CLEARANCE -->
+      <div class="col-md-4"style="width:100%;">
+          <div class="card" style="width:300px;">
+              <img src="{% static 'images/car.png' %}" class="card-img-top" style="height: 200px;">
+              <div class="card-body">
+                  <h5 class="card-title">Welcome to Control List Monitoring platform.</h5>
+                  <p class="card-text">Select.</p>
+                  <a href="{% url 'dashboard' %}" class="btn btn-primary">Launch Dashboard</a>
+              </div>
+          </div>
+      </div>
+
+<!-- OTHER SERVICES -->
+
+ <!-- LOGGED OUT USER --> 
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit"class="button"s>Log Out</button>
+</form>
+
+{% else %}
+<p class="text-center">You are not logged in</p>
+
+  <div class="container d-flex justify-content-center" >
+      <div class="card" style="width: 18rem;">
+          <img src="{% static 'images/users.png' %}" class="card-img-top" style="height: 140px; width:280px;">
+          <div class="card-body">
+              <h5 class="card-title">User Login</h5>
+              <p class="card-text">Follow links below to Login or Register</p>
+              <a href="{% url 'login' %}" id="Button1" style="margin-left:70px;" class="btn btn-success">Login/Signup</a> 
+              <br><br>
+              <p class="card-text"> Don't have an account? Create one.</p>
+              <a class="btn btn-primary" href="{% url 'signup' %}" style="background-color: blue; margin-left:70px;">Register here</a>
+            </div>
+         
+            <br>
+      </div>
+  </div>
+{% endif %}
+
+
+{% endblock %}
+
+{% block test %}
+    <h2 class="text-center">TEST BLOCK!!!</h2>
+
+ {% endblock %}

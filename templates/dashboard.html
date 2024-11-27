@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h3 class="text-center">Welcome {{user.fisrt_name}}</h3>
+
+ <!-- DASHBOARD MENU -->
+<div class="container overflow-hidden text-center">
+<h5 class="section-title"><strong>Services</strong></h5>
+<div class="row">
+<div class="col-md-4">
+<div class="service" style="">
+<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+<h5><strong>See Control Lists Implemented by ISPs</strong></h5>
+<p>The following options are available.<br>
+Filters:
+-Curent list<br>
+-Recently added
+-Submit new domains</p><br>
+<a href="{% url 'dashboard' %}" class="btn btn-primary">View Control Lists</a>
+</div >
+</div >
+
+<div class="col-md-4">
+<div class="service">
+<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+<h5><strong>Submit New Domains</strong></h5>
+<p>The following options are available.<br>
+Filters:
+-Curent list<br>
+-Recently added
+-Submit new domains</p><br>
+<a href="{% url 'dashboard' %}" class="btn btn-primary">Submit Domains</a>
+</div >
+</div >
+<div class="col-md-4">
+<div class="service">
+<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+<h5><strong>See</strong></h5>
+Contact our Customer Support Center.
+</div >
+</div >
+</div >
+ <!-- DASHBOARD MENU -->
+ <!-- LOGGED IN USER -->
+
+<!-- OTHER SERVICES -->
+<style type="text/css">
+.col-md-4{
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+.section-title {
+text-align:center;
+margin-top: 1em;
+background-color: grey;
+padding: .5em 0;
+border-radius: .3em;
+}
+.service {
+border-radius: .3em;
+text-align: left;
+padding: 3em 2em 1em 2em;
+color: white;
+background-color: darkgreen;
+}
+.service .glyphicon {
+font-size: 5em;
+}
+</style>
+{% endblock %}
+
+{% block test %}
+    <h2 class="text-center">TEST BLOCK!!!</h2>
+ {% endblock %}
