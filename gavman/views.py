@@ -8,4 +8,4 @@ from django.contrib.auth.decorators import login_required
 
 @login_required(login_url='login/')
 def launchDashboard(request):
-  return render(request, 'dashboard.html')
+  return render(request, 'layout.html')

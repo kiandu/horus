@@ -159,4 +159,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # django_project/settings.py
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
+#SESSION_COOKIE_AGE = 60
+
 #AUTH_USER_MODEL = 'accounts.UserProfile'
